@@ -1,0 +1,53 @@
+<section class="section">
+	<h1 class="title">Simple Pages using plain JTE files</h1>
+	<h2 class="subtitle">For basic usecases. Needs a spring-controller.</h2>
+	<h6 class="subtitle"></h6>
+
+	<div class="fixed-grid">
+		<div class="grid">
+            {#include dev/svenehrke/demo/ssfepatterns/main/maincard.html
+                    cardInfo=cardInfo
+			}{/include}
+
+{!			@template.jte.main.maincard(
+			url = ,
+			title = @`Basic JTE Page`,
+			subtitle = @`made using a JTE template`,
+			content = @`Demo...`
+			)
+!}
+{!			@template.jte.main.maincard(
+			url = PlainJTEController.PAGE_02_WITH_COMPONENT_URL,
+			title = @`Basic JTE Page`,
+			subtitle = @`using a JTE component`,
+			content = @`Demo...`
+			)
+
+			@template.jte.main.maincard(
+			url = PlainJTEController.PAGE_03_WITH_PARAMS_COMPONENT_URL,
+			title = @`Page and Component`,
+			subtitle = @`with parameters`,
+			recommendation = @`When page and/or component need parameters`,
+			content = @`Demo...`
+			)
+
+			@template.jte.main.maincard(
+			url = PlainJTEController.PAGE_04_WITH_CONTENT_PARAMS_COMPONENT_URL,
+			title = @`Content parameter`,
+			subtitle = @`passed from page to component`,
+			recommendation = @`When html needs to be passed into component`,
+			content = @`Demo...`
+			)
+
+			@template.jte.main.maincard(
+			url = PlainJTEController.PAGE_05_WITH_NESTED_COMPONENTS_URL,
+			title = @`Nested components`,
+			subtitle = @`or: template in template`,
+			recommendation = @`if you need components in content-parameters`,
+			content = @`Demo...`
+			)
+!}
+		</div>
+	</div>
+</section>
+
