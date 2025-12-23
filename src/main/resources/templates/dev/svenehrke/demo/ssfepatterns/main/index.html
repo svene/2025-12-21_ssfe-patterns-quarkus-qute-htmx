@@ -1,3 +1,5 @@
+{@java.util.List<dev.svenehrke.demo.ssfepatterns.main.MainCardInfo> plainCardInfos}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +18,10 @@
 		</div>
 	</section>
 
-	{#include dev/svenehrke/demo/ssfepatterns/main/main_01_plain-section.html/}
+	{#include
+	  dev/svenehrke/demo/ssfepatterns/main/main_01_plain-section.html
+      cardInfos = plainCardInfos
+	/}
 
 	{!@template.jte.main.main_02_simple-vc-section()!}
 	{!@template.jte.main.main_03_pages-section()!}

@@ -1,3 +1,12 @@
+{@java.util.List<dev.svenehrke.demo.ssfepatterns.main.MainCardInfo> cardInfos}
+
+{#fragment strong _hidden}
+	<strong>{val}</strong>
+{/fragment}
+
+{#include $strong val='contains' /}
+
+
 <section class="section">
 	<h1 class="title">Simple Pages using plain JTE files</h1>
 	<h2 class="subtitle">For basic usecases. Needs a spring-controller.</h2>
@@ -5,21 +14,12 @@
 
 	<div class="fixed-grid">
 		<div class="grid">
-            {#include dev/svenehrke/demo/ssfepatterns/main/maincard subtitle = "made using a QUTE template"}
-              {#title}Basic<br>QUTE Page{/title}
-                {#content}Demo...{/content}
+            {#include dev/svenehrke/demo/ssfepatterns/main/maincard cardInfo = cardInfos[0]}
+              {#content}XXXDemo...{/content}
 			{/include}
 
-            {#include dev/svenehrke/demo/ssfepatterns/main/maincard subtitle = "using a QUTE component"}
-              {#title}Basic<br>QUTE Page{/title}
-              {#content}Demo...{/content}
-			{/include}
- 			{! withRecommendation: hack because QUTE has no means to find out if an optional section was passed or not !}
-            {#include dev/svenehrke/demo/ssfepatterns/main/maincard subtitle = "using a QUTE component" withRecommendation = true}
-              {#title}Basic<br>QUTE Page{/title}
-              {#recommendation}recommendation<br>is{/recommendation}
-              {#content}Demo...{/content}
-			{/include}
+            {#include dev/svenehrke/demo/ssfepatterns/main/maincard cardInfo = cardInfos[1]}{/include}
+            {#include dev/svenehrke/demo/ssfepatterns/main/maincard cardInfo = cardInfos[2]}{/include}
 		</div>
 	</div>
 </section>

@@ -1,20 +1,20 @@
-{@String subtitle}
-{@boolean withRecommendation = false}
+{@dev.svenehrke.demo.ssfepatterns.main.MainCardInfo cardInfo}
 
 <div class="cell is-flex is-justify-content-start is-align-items-center">
 	<div class="card" style="width: 50%; height: 100%">
-		<a href="#" target="_blank">
+		<a href="{cardInfo.url}" target="_blank">
 			<div class="card-content">
-				<p class="title is-4 mb-1">{#insert title}{/insert}</p>
-				<p class="title is-6 mb-1">{subtitle}</p>
-                {#if withRecommendation}
+				<p class="title is-4 mb-1">{cardInfo.title}</p>
+				<p class="title is-6 mb-1">{cardInfo.subTitle}</p>
+
+                {#if cardInfo.recommendation}
 					<p class="subtitle is-6 mb-1">
-                        {#insert recommendation}{/insert}
+                        {cardInfo.recommendation}
 					</p>
                 {/if}
 			</div>
 			<div class="card-content">
-                {#insert content}{/insert}
+                {#insert content}{cardInfo.content}{/insert}
 			</div>
 
 		</a>
