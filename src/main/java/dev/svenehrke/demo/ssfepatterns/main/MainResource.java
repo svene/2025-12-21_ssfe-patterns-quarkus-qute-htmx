@@ -32,14 +32,14 @@ public class MainResource {
 				P01PlainQuteResource.PAGE_02_URL,
 				new RawString("Basic<br>QUTE Page"),
 				new RawString("using a QUTE component"),
-				new RawString("RRRRRRRR"),
+				null,
 			    new RawString("Demo...")
 			),
 			new MainCardInfo(
-				P01PlainQuteResource.PAGE_02_URL,
-				new RawString("Basic<br>QUTE Page"),
-				new RawString("using a QUTE component"),
-				null,
+				P01PlainQuteResource.PAGE_03_URL,
+				new RawString("Page and Component"),
+				new RawString("with parameters"),
+				new RawString("When page and/or component need parameters"),
 				new RawString("Demo...")
 			)
 			)
