@@ -1,5 +1,5 @@
 {! from model, passed by controller: !}
-{@String greetee = "World"}
+{@String greetee = "You"}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +15,9 @@
 {!	first parameter passed literally from this template.
 	Second parameter coming in from controller through Model and passed to included template:
 !}
-    {#include dev/svenehrke/demo/ssfepatterns/components/helloworldparams.html greeting="Hello" greetee = greetee}{/include}
+    {#include dev/svenehrke/demo/ssfepatterns/components/helloworldparams.html greeting="Hey" greetee = greetee}{/include}
+
+    {#include dev/svenehrke/demo/ssfepatterns/p01plain/page03withparamscomponent_code.html}{/include}
 
 </div>
 </body>
