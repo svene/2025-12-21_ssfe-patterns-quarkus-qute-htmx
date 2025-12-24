@@ -41,6 +41,13 @@ public class MainResource {
 				new RawString("with parameters"),
 				new RawString("When page and/or component need parameters"),
 				new RawString("Demo...")
+			),
+			new MainCardInfo(
+				P01PlainQuteResource.PAGE_04_URL,
+				new RawString("Content parameter"),
+				new RawString("passed from page to component"),
+				new RawString("When html needs to be passed into component"),
+				new RawString("Demo...")
 			)
 			)
 		);

@@ -1,0 +1,24 @@
+{! from model, passed by controller: !}
+{@String greetee = "World"}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="/css/simplepage.css"/>
+</head>
+<body class="page">
+
+<div>
+	<h1>Page with ContentParams-Component</h1>
+
+    {#include dev/svenehrke/demo/ssfepatterns/components/helloworldcontent.html}
+		{!include HTML content: !}
+		How are you?<br>
+		Hopefully <strong>very well</strong>.<br>
+		<p>See you soon!</p>
+    {/include}
+
+</div>
+</body>
+</html>
