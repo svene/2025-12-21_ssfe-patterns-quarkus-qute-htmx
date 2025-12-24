@@ -12,6 +12,6 @@ public class Page04Resource {
 	@GET
 	@Path(URL)
 	public TemplateInstance page() {
-		return PlainTemplates.Templates.page04withcontentparamscomponent();
+		return PlainTemplates.Templates.page04withcontentparamscomponent(new Page04Code());
 	}
 }
