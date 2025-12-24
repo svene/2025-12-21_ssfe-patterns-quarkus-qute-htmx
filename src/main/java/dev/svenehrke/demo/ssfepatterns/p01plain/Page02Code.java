@@ -1,6 +1,6 @@
 package dev.svenehrke.demo.ssfepatterns.p01plain;
 
-public record Page02Code(String html, String java, String helloWorldHtml) {
+public record Page02Code(String html, String java, String helloWorldHtml, String templatesJava) {
 	private static final String HTML = """
 	  <h1>Page with Component</h1>
 	  {! Include Component: !}
@@ -8,26 +8,29 @@ public record Page02Code(String html, String java, String helloWorldHtml) {
 	  """;
 	private static final String JAVA = """
       @Path("/")
-      public class P01PlainQuteResource {
-        public static final String PAGE_01_URL = "/p01plain/page01";
-
-        @CheckedTemplate(basePath = "dev/svenehrke/demo/ssfepatterns/p01plain")
-        static class Templates {
-          public static native TemplateInstance page01();
-        }
+      public class Page02Resource {
+        public static final String URL = "/p01plain/page02withcomponent";
 
         @GET
-        @Path(PAGE_01_URL)
-        public TemplateInstance page01() {
-          return Templates.page01();
+        @Path(URL)
+        public TemplateInstance page() {
+          return PlainTemplates.Templates.page02withcomponent();
         }
       }
       """;
 	private static final String HELLOWORLD_HTML = """
 	  <h3>Hello world!</h3>
 	  """;
+	private static final String TEMPLATES_JAVA = """
+      public class PlainTemplates {
+        @CheckedTemplate(basePath = "dev/svenehrke/demo/ssfepatterns/p01plain")
+        static class Templates {
+          public static native TemplateInstance page02withcomponent();
+        }
+      }
+      """;
 
 	public Page02Code() {
-		this(HTML, JAVA, HELLOWORLD_HTML);
+		this(HTML, JAVA, HELLOWORLD_HTML, TEMPLATES_JAVA);
 	}
 }

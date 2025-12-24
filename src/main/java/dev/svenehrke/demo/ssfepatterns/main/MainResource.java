@@ -1,7 +1,9 @@
 package dev.svenehrke.demo.ssfepatterns.main;
 
-import dev.svenehrke.demo.ssfepatterns.p01plain.P01PlainQuteResource;
 import dev.svenehrke.demo.ssfepatterns.p01plain.Page01Resource;
+import dev.svenehrke.demo.ssfepatterns.p01plain.Page02Resource;
+import dev.svenehrke.demo.ssfepatterns.p01plain.Page03Resource;
+import dev.svenehrke.demo.ssfepatterns.p01plain.Page04Resource;
 import io.quarkus.qute.CheckedTemplate;
 import io.quarkus.qute.RawString;
 import io.quarkus.qute.TemplateInstance;
@@ -30,21 +32,21 @@ public class MainResource {
 				new RawString("Demo...")
 			),
 			new MainCardInfo(
-				P01PlainQuteResource.PAGE_02_URL,
+				Page02Resource.URL,
 				new RawString("Basic<br>QUTE Page"),
 				new RawString("using a QUTE component"),
 				null,
 			    new RawString("Demo...")
 			),
 			new MainCardInfo(
-				P01PlainQuteResource.PAGE_03_URL,
+				Page03Resource.URL,
 				new RawString("Page and Component"),
 				new RawString("with parameters"),
 				new RawString("When page and/or component need parameters"),
 				new RawString("Demo...")
 			),
 			new MainCardInfo(
-				P01PlainQuteResource.PAGE_04_URL,
+				Page04Resource.URL,
 				new RawString("Content parameter"),
 				new RawString("passed from page to component"),
 				new RawString("When html needs to be passed into component"),
