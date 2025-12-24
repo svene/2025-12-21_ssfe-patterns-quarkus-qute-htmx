@@ -16,7 +16,7 @@ public class P01PlainQuteResource {
 	@CheckedTemplate(basePath = "dev/svenehrke/demo/ssfepatterns/p01plain")
 	static class Templates {
 		public static native TemplateInstance page01(Page01Code code);
-		public static native TemplateInstance page02withcomponent();
+		public static native TemplateInstance page02withcomponent(Page02Code code);
 		public static native TemplateInstance page03withparamscomponent();
 		public static native TemplateInstance page04withcontentparamscomponent();
 	}
@@ -28,7 +28,7 @@ public class P01PlainQuteResource {
 	@GET
 	@Path(PAGE_02_URL)
 	public TemplateInstance page02withcomponent() {
-		return Templates.page02withcomponent();
+		return Templates.page02withcomponent(new Page02Code());
 	}
 	@GET
 	@Path(PAGE_03_URL)
