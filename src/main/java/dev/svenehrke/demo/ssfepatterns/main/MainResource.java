@@ -1,6 +1,7 @@
 package dev.svenehrke.demo.ssfepatterns.main;
 
 import dev.svenehrke.demo.ssfepatterns.p01plain.P01PlainQuteResource;
+import dev.svenehrke.demo.ssfepatterns.p01plain.Page01Resource;
 import io.quarkus.qute.CheckedTemplate;
 import io.quarkus.qute.RawString;
 import io.quarkus.qute.TemplateInstance;
@@ -22,7 +23,7 @@ public class MainResource {
 	public TemplateInstance index() {
 		return Templates.index(List.of(
 			new MainCardInfo(
-				P01PlainQuteResource.PAGE_01_URL,
+				Page01Resource.URL,
 				new RawString("Basic<br>QUTE Page"),
 				new RawString("made using a QUTE template"),
 				null,
