@@ -12,7 +12,7 @@ import java.util.List;
 @Path("/")
 public class MainResource {
 
-	@CheckedTemplate(basePath = "dev/svenehrke/demo/ssfepatterns/main")
+	@CheckedTemplate(basePath = "dev/svenehrke/demo/ssfepatterns/m00main")
 	static class Templates {
 		public static native TemplateInstance index(
 			List<MainCardInfo> plainCardInfos,

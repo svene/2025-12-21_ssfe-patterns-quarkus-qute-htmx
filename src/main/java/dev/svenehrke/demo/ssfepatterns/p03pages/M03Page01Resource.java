@@ -13,6 +13,6 @@ public class M03Page01Resource {
 	@GET
 	@Path(URL)
 	public TemplateInstance page() {
-		return P03PagesTemplates.Templates.page01contentpage(new Page01Code());
+		return M03PagesTemplates.Templates.page01contentpage(new Page01Code());
 	}
 }

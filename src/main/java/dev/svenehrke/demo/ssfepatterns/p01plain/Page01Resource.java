@@ -12,6 +12,6 @@ public class Page01Resource {
 	@GET
 	@Path(URL)
 	public TemplateInstance page() {
-		return PlainTemplates.Templates.page01(new Page01Code());
+		return M01PlainTemplates.Templates.page01(new Page01Code());
 	}
 }

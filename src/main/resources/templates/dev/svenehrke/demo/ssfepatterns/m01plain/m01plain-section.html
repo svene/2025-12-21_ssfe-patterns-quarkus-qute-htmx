@@ -1,0 +1,28 @@
+{@java.util.List<dev.svenehrke.demo.ssfepatterns.main.MainCardInfo> cardInfos}
+
+{! TODO !}
+{#fragment strong _hidden}
+	<strong>{val}</strong>
+{/fragment}
+
+{#include $strong val='contains' /}
+
+
+<section class="section">
+	<h1 class="title">Simple Pages using QUTE</h1>
+	<h2 class="subtitle">For basic usecases. Needs a Resource-Endpoint</h2>
+
+	<div class="fixed-grid">
+		<div class="grid">
+            {#include dev/svenehrke/demo/ssfepatterns/m00main/maincard cardInfo = cardInfos[0]}
+              {#content}XXXDemo...{/content} {! TODO !}
+			{/include}
+
+            {#include dev/svenehrke/demo/ssfepatterns/m00main/maincard cardInfo = cardInfos[1]}{/include}
+            {#include dev/svenehrke/demo/ssfepatterns/m00main/maincard cardInfo = cardInfos[2]}{/include}
+            {#include dev/svenehrke/demo/ssfepatterns/m00main/maincard cardInfo = cardInfos[3]}{/include}
+            {#include dev/svenehrke/demo/ssfepatterns/m00main/maincard cardInfo = cardInfos[4]}{/include}
+		</div>
+	</div>
+</section>
+
