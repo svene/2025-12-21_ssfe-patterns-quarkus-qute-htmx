@@ -12,6 +12,6 @@ public class Page05Resource {
 	@GET
 	@Path(URL)
 	public TemplateInstance page() {
-		return PlainTemplates.Templates.page04withcontentparamscomponent(new Page04Code());
+		return PlainTemplates.Templates.page05withnestedcomponents(new Page05Code());
 	}
 }

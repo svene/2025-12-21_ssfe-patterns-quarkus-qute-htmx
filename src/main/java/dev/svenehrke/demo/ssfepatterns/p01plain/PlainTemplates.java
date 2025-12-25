@@ -10,5 +10,6 @@ public class PlainTemplates {
 		public static native TemplateInstance page02withcomponent(Page02Code code);
 		public static native TemplateInstance page03withparamscomponent(Page03Code code);
 		public static native TemplateInstance page04withcontentparamscomponent(Page04Code code);
+		public static native TemplateInstance page05withnestedcomponents(Page05Code code);
 	}
 }

@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="/css/simplepage.css"/>
+</head>
+<body class="page">
+
+<div>
+	<h1>Page with Nested Components</h1>
+
+    {!outer template: !}
+    {#include dev/svenehrke/demo/ssfepatterns/components/helloworldcontent.html}
+		<p>before nested content</p>
+        {!nested template: !}
+    	{#include dev/svenehrke/demo/ssfepatterns/components/helloworldcontent.html}
+			<p>NESTED CONTENT</p>
+    	{/include}
+		<p>after nested content</p>
+    {/include}
+
+    {#include dev/svenehrke/demo/ssfepatterns/p01plain/page05_code}{/include}
+
+</div>
+</body>
+</html>
