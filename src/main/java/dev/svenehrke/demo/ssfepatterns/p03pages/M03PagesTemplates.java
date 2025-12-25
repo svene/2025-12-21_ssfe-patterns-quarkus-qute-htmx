@@ -9,5 +9,6 @@ public class M03PagesTemplates {
 	static class Templates {
 		public static native TemplateInstance page01contentpage(Page01Code code);
 		public static native TemplateInstance page02contentpagewithparam(String greeting);
+		public static native TemplateInstance page03custompagewithparam(String greeting);
 	}
 }

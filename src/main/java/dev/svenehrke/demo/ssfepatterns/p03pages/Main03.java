@@ -16,10 +16,17 @@ public class Main03 {
 				new RawString("Demo...")
 			),
 			new MainCardInfo(
-				M03Page02Resource.URL,
+				M03Page02Resource.URL + "?greeting=Hello",
 				new RawString("Content Page"),
 				new RawString("taking a parameter"),
 				new RawString("When the page itself needs a parameter"),
+				new RawString("Demo...")
+			),
+			new MainCardInfo(
+				M03Page03Resource.URL + "?greeting=Hello",
+				new RawString("Custom Page"),
+				new RawString("taking a parameter"),
+				new RawString("When the opinionated content page does not fit"),
 				new RawString("Demo...")
 			)
 		);

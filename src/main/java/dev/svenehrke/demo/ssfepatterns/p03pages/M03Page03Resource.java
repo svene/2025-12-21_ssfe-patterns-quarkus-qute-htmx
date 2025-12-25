@@ -7,9 +7,9 @@ import jakarta.ws.rs.Path;
 import jakarta.ws.rs.QueryParam;
 
 @Path("/")
-public class M03Page02Resource {
+public class M03Page03Resource {
 
-	public static final String URL = "/m03pages/page02";
+	public static final String URL = "/m03pages/page03";
 
 	@GET
 	@Path(URL)
@@ -17,6 +17,6 @@ public class M03Page02Resource {
 		@QueryParam("greeting")
 		@DefaultValue("-") String greeting
 	) {
-		return M03PagesTemplates.Templates.page02contentpagewithparam(greeting);
+		return M03PagesTemplates.Templates.page03custompagewithparam(greeting);
 	}
 }
