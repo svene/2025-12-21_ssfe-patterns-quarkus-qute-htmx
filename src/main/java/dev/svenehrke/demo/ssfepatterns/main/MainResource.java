@@ -1,9 +1,6 @@
 package dev.svenehrke.demo.ssfepatterns.main;
 
-import dev.svenehrke.demo.ssfepatterns.p01plain.Page01Resource;
-import dev.svenehrke.demo.ssfepatterns.p01plain.Page02Resource;
-import dev.svenehrke.demo.ssfepatterns.p01plain.Page03Resource;
-import dev.svenehrke.demo.ssfepatterns.p01plain.Page04Resource;
+import dev.svenehrke.demo.ssfepatterns.p01plain.*;
 import io.quarkus.qute.CheckedTemplate;
 import io.quarkus.qute.RawString;
 import io.quarkus.qute.TemplateInstance;
@@ -50,6 +47,13 @@ public class MainResource {
 				new RawString("Content parameter"),
 				new RawString("passed from page to component"),
 				new RawString("When html needs to be passed into component"),
+				new RawString("Demo...")
+			),
+			new MainCardInfo(
+				Page05Resource.URL,
+				new RawString("Nested components"),
+				new RawString("or: template in template"),
+				new RawString("if you need components in content-parameters"),
 				new RawString("Demo...")
 			)
 			)
