@@ -15,12 +15,21 @@ public class MainResource {
 	@CheckedTemplate(basePath = "dev/svenehrke/demo/ssfepatterns/main")
 	static class Templates {
 		public static native TemplateInstance index(
-			List<MainCardInfo> plainCardInfos
+			List<MainCardInfo> plainCardInfos,
+			List<MainCardInfo> pagesCardInfos
 		);
 	}
+
 	@GET
 	public TemplateInstance index() {
-		return Templates.index(List.of(
+		return Templates.index(
+			PLAIN_CARD_INFOS,
+			P03_PAGES_CARD_INFOS
+		);
+	}
+
+	private static final List<MainCardInfo> PLAIN_CARD_INFOS =
+		List.of(
 			new MainCardInfo(
 				Page01Resource.URL,
 				new RawString("Basic<br>QUTE Page"),
@@ -33,7 +42,7 @@ public class MainResource {
 				new RawString("Basic<br>QUTE Page"),
 				new RawString("using a QUTE component"),
 				null,
-			    new RawString("Demo...")
+				new RawString("Demo...")
 			),
 			new MainCardInfo(
 				Page03Resource.URL,
@@ -56,7 +65,15 @@ public class MainResource {
 				new RawString("If you need components in content-parameters"),
 				new RawString("Demo...")
 			)
+		);
+	private static final List<MainCardInfo> P03_PAGES_CARD_INFOS =
+		List.of(
+			new MainCardInfo(
+				Page01Resource.URL,
+				new RawString("Content Page"),
+				null,
+				new RawString("Recommended for most use cases"),
+				new RawString("Demo...")
 			)
 		);
-	}
 }
