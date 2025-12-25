@@ -53,7 +53,7 @@ public class MainResource {
 				Page05Resource.URL,
 				new RawString("Nested components"),
 				new RawString("or: template in template"),
-				new RawString("if you need components in content-parameters"),
+				new RawString("If you need components in content-parameters"),
 				new RawString("Demo...")
 			)
 			)
