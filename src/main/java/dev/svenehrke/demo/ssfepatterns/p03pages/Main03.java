@@ -14,6 +14,13 @@ public class Main03 {
 				null,
 				new RawString("Recommended for most use cases"),
 				new RawString("Demo...")
+			),
+			new MainCardInfo(
+				M03Page02Resource.URL,
+				new RawString("Content Page"),
+				new RawString("taking a parameter"),
+				new RawString("When the page itself needs a parameter"),
+				new RawString("Demo...")
 			)
 		);
 }

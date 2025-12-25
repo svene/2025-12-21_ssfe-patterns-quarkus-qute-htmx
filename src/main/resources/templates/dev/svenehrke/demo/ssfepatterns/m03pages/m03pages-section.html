@@ -6,7 +6,9 @@
 
 	<div class="fixed-grid">
 		<div class="grid">
-            {#include dev/svenehrke/demo/ssfepatterns/m00main/maincard cardInfo = cardInfos[0]}{/include}
+            {#for it in cardInfos}
+            	{#include dev/svenehrke/demo/ssfepatterns/m00main/maincard cardInfo = it}{/include}
+            {/for}
 		</div>
 	</div>
 </section>

@@ -7,7 +7,7 @@ import jakarta.ws.rs.Path;
 @Path("/")
 public class Page05Resource {
 
-	public static final String URL = "/p01plain/page05withnestedcomponents";
+	public static final String URL = "/m01plain/page05withnestedcomponents";
 
 	@GET
 	@Path(URL)
