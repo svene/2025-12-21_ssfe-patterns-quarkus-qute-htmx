@@ -6,7 +6,7 @@ import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 
 @Path("/")
-public class Page01Resource {
+public class M03Page01Resource {
 
 	public static final String URL = "/p03pages/page01";
 
