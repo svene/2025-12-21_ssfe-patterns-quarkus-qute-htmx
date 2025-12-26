@@ -9,10 +9,8 @@ import jakarta.ws.rs.QueryParam;
 @Path("/")
 public class M03Page02Resource {
 
-	public static final String URL = "/m03pages/page02";
-
 	@GET
-	@Path(URL)
+	@Path(M03D02.URL)
 	public TemplateInstance page(
 		@QueryParam("greeting")
 		@DefaultValue("-") String greeting

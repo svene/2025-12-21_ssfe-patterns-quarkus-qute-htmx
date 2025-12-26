@@ -10,13 +10,13 @@ import java.util.List;
 public class M03Page04Resource {
 
 	@GET
-	@Path(M03Page04Urls.PAGE1_URL)
+	@Path(M03D04.PAGE1_URL)
 	public TemplateInstance page1() {
 		return M03PagesTemplates.Templates.page04mpapage1();
 	}
 
 	@GET
-	@Path(M03Page04Urls.PAGE2_URL)
+	@Path(M03D04.PAGE2_URL)
 	public TemplateInstance page2() {
 		return M03PagesTemplates.Templates.page04mpapage2();
 	}

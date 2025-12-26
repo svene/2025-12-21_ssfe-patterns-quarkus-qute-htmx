@@ -7,10 +7,8 @@ import jakarta.ws.rs.Path;
 @Path("/")
 public class Page03Resource {
 
-	public static final String URL = "/p01plain/page03withparamscomponent";
-
 	@GET
-	@Path(URL)
+	@Path(M01D03.URL)
 	public TemplateInstance page() {
 		return M01PlainTemplates.Templates.page03withparamscomponent(new Page03Code());
 	}
