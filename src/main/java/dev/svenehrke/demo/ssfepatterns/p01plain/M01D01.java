@@ -8,7 +8,7 @@ import io.quarkus.qute.TemplateInstance;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 
-@TemplateData(namespace = "m01d01")
+@TemplateData(namespace = TemplateData.SIMPLENAME)
 @Path("/")
 public class M01D01 {
 	public static final String URL = "/p01plain/page01";

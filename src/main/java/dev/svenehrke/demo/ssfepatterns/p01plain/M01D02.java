@@ -4,7 +4,7 @@ import dev.svenehrke.demo.ssfepatterns.main.MainCardInfo;
 import io.quarkus.qute.RawString;
 import io.quarkus.qute.TemplateData;
 
-@TemplateData(namespace = "m01d02")
+@TemplateData(namespace = TemplateData.SIMPLENAME)
 public class M01D02 {
 	public static final String URL = "/p01plain/page02withcomponent";
 	public static final MainCardInfo CARD_INFO  = new MainCardInfo(
