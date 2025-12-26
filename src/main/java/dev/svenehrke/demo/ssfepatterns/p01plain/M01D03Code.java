@@ -1,7 +1,10 @@
 package dev.svenehrke.demo.ssfepatterns.p01plain;
 
-public record Page03Code(String html, String java, String helloWorldHtml, String templatesJava) {
-	private static final String HTML = """
+import io.quarkus.qute.TemplateData;
+
+@TemplateData(namespace = TemplateData.SIMPLENAME)
+public interface M01D03Code {
+	String HTML = """
 	  {! from model, passed by controller: !}
 	  {@String greetee = "You"}
 	  <h1>Page with Params-Component</h1>
@@ -10,7 +13,7 @@ public record Page03Code(String html, String java, String helloWorldHtml, String
 	  !}
 	  {#include dev/svenehrke/demo/ssfepatterns/components/helloworldparams.html greeting="Hey" greetee = greetee}{/include}
 	  """;
-	private static final String JAVA = """
+	String JAVA = """
       @Path("/")
       public class Page03Resource {
         public static final String URL = "/p01plain/page03withparamscomponent";
@@ -22,13 +25,13 @@ public record Page03Code(String html, String java, String helloWorldHtml, String
         }
       }
       """;
-	private static final String HELLOWORLD_HTML = """
+	String HELLOWORLD_HTML = """
 	  {@String greeting = "Hello"}
 	  {@String greetee = "World"}
 	  
 	  <h3>{greeting} {greetee}!</h3>
 	  """;
-	private static final String TEMPLATES_JAVA = """
+	String TEMPLATES_JAVA = """
       public class PlainTemplates {
         @CheckedTemplate(basePath = "dev/svenehrke/demo/ssfepatterns/p01plain")
         static class Templates {
@@ -37,7 +40,4 @@ public record Page03Code(String html, String java, String helloWorldHtml, String
       }
       """;
 
-	public Page03Code() {
-		this(HTML, JAVA, HELLOWORLD_HTML, TEMPLATES_JAVA);
-	}
 }
