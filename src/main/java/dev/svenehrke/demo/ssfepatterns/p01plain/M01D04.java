@@ -1,12 +1,24 @@
 package dev.svenehrke.demo.ssfepatterns.p01plain;
 
 import dev.svenehrke.demo.ssfepatterns.main.MainCardInfo;
+import io.quarkus.qute.CheckedTemplate;
 import io.quarkus.qute.RawString;
 import io.quarkus.qute.TemplateData;
+import io.quarkus.qute.TemplateInstance;
+import jakarta.ws.rs.GET;
+import jakarta.ws.rs.Path;
 
 @TemplateData(namespace = TemplateData.SIMPLENAME)
+@Path("/")
 public class M01D04 {
-	public static final String URL = "/p01plain/page04withcontentparamscomponent";
+	private static final String URL = "/p01plain/page04withcontentparamscomponent";
+
+	@GET
+	@Path(M01D04.URL)
+	public TemplateInstance page() {
+		return Templates.page04withcontentparamscomponent(new Page04Code());
+	}
+
 	public static final MainCardInfo CARD_INFO  = new MainCardInfo(
 		URL,
 		new RawString("Content parameter"),
@@ -14,5 +26,10 @@ public class M01D04 {
 		new RawString("When html needs to be passed into component"),
 		new RawString("Demo...")
 	);
+
+	@CheckedTemplate(basePath = "dev/svenehrke/demo/ssfepatterns/m01plain")
+	private static class Templates {
+		public static native TemplateInstance page04withcontentparamscomponent(Page04Code code);
+	}
 
 }
