@@ -1,10 +1,13 @@
 package dev.svenehrke.demo.ssfepatterns.p01plain;
 
-public record Page01Code(String html, String java, String templatesJava) {
-	private static final String HTML = """
+import io.quarkus.qute.TemplateData;
+
+@TemplateData(namespace = TemplateData.SIMPLENAME)
+public interface M01D01Code {
+	String HTML = """
 	  <h1>Application Page</h1>
 	  """;
-	private static final String JAVA = """
+	String JAVA = """
       @Path("/")
       public class Page01Resource {
         public static final String URL = "/p01plain/page01";
@@ -16,7 +19,7 @@ public record Page01Code(String html, String java, String templatesJava) {
         }
       }
       """;
-	private static final String TEMPLATES_JAVA = """
+	String TEMPLATES_JAVA = """
       public class PlainTemplates {
         @CheckedTemplate(basePath = "dev/svenehrke/demo/ssfepatterns/p01plain")
         static class Templates {
@@ -24,7 +27,4 @@ public record Page01Code(String html, String java, String templatesJava) {
         }
       }
       """;
-	public Page01Code() {
-		this(HTML, JAVA, TEMPLATES_JAVA);
-	}
 }

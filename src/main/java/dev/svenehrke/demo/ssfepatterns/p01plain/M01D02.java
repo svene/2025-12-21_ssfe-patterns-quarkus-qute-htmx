@@ -16,7 +16,7 @@ public class M01D02 {
 	@GET
 	@Path(URL)
 	public TemplateInstance page() {
-		return Templates.page02withcomponent(new Page02Code());
+		return Templates.page02withcomponent();
 	}
 	public static final MainCardInfo CARD_INFO  = new MainCardInfo(
 		URL,
@@ -28,7 +28,7 @@ public class M01D02 {
 
 	@CheckedTemplate(basePath = "dev/svenehrke/demo/ssfepatterns/m01plain")
 	private static class Templates {
-		public static native TemplateInstance page02withcomponent(Page02Code code);
+		public static native TemplateInstance page02withcomponent();
 	}
 
 }
