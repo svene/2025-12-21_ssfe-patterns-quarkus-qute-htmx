@@ -28,6 +28,13 @@ public class Main03 {
 				new RawString("taking a parameter"),
 				new RawString("When the opinionated content page does not fit"),
 				new RawString("Demo...")
+			),
+			new MainCardInfo(
+				M03Page04Resource.PAGE1_URL,
+				new RawString("MPA Example"),
+				new RawString("with menu"),
+				null,
+				new RawString("Demo...")
 			)
 		);
 }
