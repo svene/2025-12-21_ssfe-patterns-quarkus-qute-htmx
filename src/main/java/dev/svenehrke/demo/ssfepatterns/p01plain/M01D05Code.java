@@ -1,7 +1,10 @@
 package dev.svenehrke.demo.ssfepatterns.p01plain;
 
-public record Page05Code(String html, String java, String helloWorldHtml, String templatesJava) {
-	private static final String HTML = """
+import io.quarkus.qute.TemplateData;
+
+@TemplateData(namespace = TemplateData.SIMPLENAME)
+public interface M01D05Code {
+	String HTML = """
 	  <h1>Page with Nested Components</h1>
 	  {! Outer template: !}
 	  {#include dev/svenehrke/demo/ssfepatterns/components/helloworldcontent.html}
@@ -13,7 +16,7 @@ public record Page05Code(String html, String java, String helloWorldHtml, String
 	    <p>after nested content</p>
 	  {/include}
 	  """;
-	private static final String JAVA = """
+	String JAVA = """
       @Path("/")
       public class Page04Resource {
         public static final String URL = "/p01plain/page05withnestedcomponents";
@@ -25,11 +28,11 @@ public record Page05Code(String html, String java, String helloWorldHtml, String
         }
       }
       """;
-	private static final String HELLOWORLD_HTML = """
+	String HELLOWORLD_HTML = """
 	  <p>Hi there!</p>
 	  {#insert}{/insert}
 	  """;
-	private static final String TEMPLATES_JAVA = """
+	String TEMPLATES_JAVA = """
       public class PlainTemplates {
         @CheckedTemplate(basePath = "dev/svenehrke/demo/ssfepatterns/p01plain")
         static class Templates {
@@ -38,7 +41,4 @@ public record Page05Code(String html, String java, String helloWorldHtml, String
       }
       """;
 
-	public Page05Code() {
-		this(HTML, JAVA, HELLOWORLD_HTML, TEMPLATES_JAVA);
-	}
 }
