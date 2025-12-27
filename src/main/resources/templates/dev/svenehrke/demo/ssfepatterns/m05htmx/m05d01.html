@@ -1,0 +1,12 @@
+{#include dev/svenehrke/demo/ssfepatterns/components/bulmapage.html}
+    <h3>UrlComponentPage</h3>
+    <button class="button" hx-get="{M05D01Message:URL}?message=hello" hx-target="#my-message">Include Component</button>
+    {!?message=hello!}
+    <div id="my-message"></div>
+    <hr>
+    <p>Message Component is dynamically included using:</p>
+    <pre>hx-get=M05D01Message.URL?message=hello</pre>
+    <hr>
+    <p>CODE (TBD)</p>
+{/include}
+
