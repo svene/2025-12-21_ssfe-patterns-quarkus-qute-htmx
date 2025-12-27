@@ -1,30 +1,27 @@
-package dev.svenehrke.demo.ssfepatterns.p01plain;
+package dev.svenehrke.demo.ssfepatterns.m01plain;
 
 import io.quarkus.qute.TemplateData;
 
 @TemplateData(namespace = TemplateData.SIMPLENAME)
-public interface M01D05Code {
+public interface M01D04Code {
 	String HTML = """
-	  <h1>Page with Nested Components</h1>
-	  {! Outer template: !}
+	  <h1>Page with ContentParams-Component</h1>
 	  {#include dev/svenehrke/demo/ssfepatterns/components/helloworldcontent.html}
-	    <p>before nested content</p>
-	    {! Nested template: !}
-	    {#include dev/svenehrke/demo/ssfepatterns/components/helloworldcontent.html}
-	      <p>NESTED CONTENT</p>
-	    {/include}
-	    <p>after nested content</p>
+	    {!include HTML content: !}
+	    How are you?<br>
+	    Hopefully <strong>very well</strong>.<br>
+	    <p>See you soon!</p>
 	  {/include}
 	  """;
 	String JAVA = """
       @Path("/")
       public class Page04Resource {
-        public static final String URL = "/p01plain/page05withnestedcomponents";
+        public static final String URL = "/p01plain/page04withcontentparamscomponent";
 
         @GET
         @Path(URL)
         public TemplateInstance page() {
-          return PlainTemplates.Templates.page05withnestedcomponents();
+          return PlainTemplates.Templates.page04withcontentparamscomponent();
         }
       }
       """;
@@ -36,7 +33,7 @@ public interface M01D05Code {
       public class PlainTemplates {
         @CheckedTemplate(basePath = "dev/svenehrke/demo/ssfepatterns/p01plain")
         static class Templates {
-          public static native TemplateInstance page05withnestedcomponents();
+          public static native TemplateInstance page04withcontentparamscomponent();
         }
       }
       """;

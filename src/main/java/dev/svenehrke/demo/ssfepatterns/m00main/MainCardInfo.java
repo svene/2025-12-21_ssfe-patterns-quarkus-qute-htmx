@@ -1,4 +1,4 @@
-package dev.svenehrke.demo.ssfepatterns.main;
+package dev.svenehrke.demo.ssfepatterns.m00main;
 
 import io.quarkus.qute.RawString;
 

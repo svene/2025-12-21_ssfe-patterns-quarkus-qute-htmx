@@ -1,6 +1,6 @@
-package dev.svenehrke.demo.ssfepatterns.p01plain;
+package dev.svenehrke.demo.ssfepatterns.m01plain;
 
-import dev.svenehrke.demo.ssfepatterns.main.MainCardInfo;
+import dev.svenehrke.demo.ssfepatterns.m00main.MainCardInfo;
 import io.quarkus.qute.CheckedTemplate;
 import io.quarkus.qute.RawString;
 import io.quarkus.qute.TemplateData;
@@ -11,12 +11,12 @@ import jakarta.ws.rs.Path;
 @TemplateData(namespace = TemplateData.SIMPLENAME)
 @Path("/")
 public class M01D02 {
-	private static final String URL = "/p01plain/page02withcomponent";
+	private static final String URL = "/m01/d02";
 
 	@GET
 	@Path(URL)
 	public TemplateInstance page() {
-		return Templates.page02withcomponent();
+		return Templates.m01d02();
 	}
 	public static final MainCardInfo CARD_INFO  = new MainCardInfo(
 		URL,
@@ -28,7 +28,7 @@ public class M01D02 {
 
 	@CheckedTemplate(basePath = "dev/svenehrke/demo/ssfepatterns/m01plain")
 	private static class Templates {
-		public static native TemplateInstance page02withcomponent();
+		public static native TemplateInstance m01d02();
 	}
 
 }

@@ -1,4 +1,4 @@
-package dev.svenehrke.demo.ssfepatterns.p01plain;
+package dev.svenehrke.demo.ssfepatterns.m01plain;
 
 import io.quarkus.qute.TemplateData;
 
