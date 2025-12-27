@@ -27,7 +27,7 @@ public class M04D01 {
 		new RawString("Demo...")
 	);
 
-	@CheckedTemplate(basePath = "dev/svenehrke/demo/ssfepatterns/m04uipatterns/d01parentchild")
+	@CheckedTemplate(basePath = "dev/svenehrke/demo/ssfepatterns/m04uipatterns")
 	private static class Templates {
 		public static native TemplateInstance d01parentchildpage();
 	}
