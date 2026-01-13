@@ -9,21 +9,18 @@ public interface M01D01Code {
 	  """;
 	String JAVA = """
       @Path("/")
-      public class Page01Resource {
-        public static final String URL = "/p01plain/page01";
+      public class M01D01 {
+        public static final String URL = "/m01/d01";
 
         @GET
         @Path(URL)
         public TemplateInstance page() {
-          return PlainTemplates.Templates.page01();
+          return Templates.m01d01();
         }
-      }
-      """;
-	String TEMPLATES_JAVA = """
-      public class PlainTemplates {
-        @CheckedTemplate(basePath = "dev/svenehrke/demo/ssfepatterns/p01plain")
-        static class Templates {
-          public static native TemplateInstance page01();
+
+        @CheckedTemplate(basePath = "dev/svenehrke/demo/ssfepatterns/m01plain")
+        private static class Templates {
+          public static native TemplateInstance m01d01();
         }
       }
       """;
