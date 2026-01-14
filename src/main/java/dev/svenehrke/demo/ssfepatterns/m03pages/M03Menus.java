@@ -29,4 +29,11 @@ public interface M03Menus {
 		new RawString("When the opinionated content page does not fit"),
 		new RawString("Demo...")
 	);
+	MainCardInfo M03D04_CARD_INFO = new MainCardInfo(
+		M03D04.PAGE1_URL,
+		new RawString("MPA Example"),
+		new RawString("with menu"),
+		null,
+		new RawString("Demo...")
+	);
 }

@@ -1,8 +1,6 @@
 package dev.svenehrke.demo.ssfepatterns.m03pages;
 
-import dev.svenehrke.demo.ssfepatterns.m00main.MainCardInfo;
 import io.quarkus.qute.CheckedTemplate;
-import io.quarkus.qute.RawString;
 import io.quarkus.qute.TemplateData;
 import io.quarkus.qute.TemplateInstance;
 import jakarta.ws.rs.GET;
@@ -25,14 +23,6 @@ public class M03D04 {
 	public TemplateInstance page2() {
 		return Templates.m03d04p2();
 	}
-
-	public static final MainCardInfo CARD_INFO  = new MainCardInfo(
-		PAGE1_URL,
-		new RawString("MPA Example"),
-		new RawString("with menu"),
-		null,
-		new RawString("Demo...")
-	);
 
 	@CheckedTemplate(basePath = "dev/svenehrke/demo/ssfepatterns/m03pages")
 	private static class Templates {
