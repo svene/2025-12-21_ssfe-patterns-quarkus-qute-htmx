@@ -10,14 +10,13 @@ import jakarta.ws.rs.QueryParam;
 
 @Path("/")
 @TemplateData(namespace = TemplateData.SIMPLENAME)
-public class Routing {
+public class M03Routing {
 	public static final String M03D03_URL = "/m03/d03";
 
 	@GET
 	@Path(M03D03_URL)
 	public TemplateInstance page(
-		@QueryParam("greeting")
-		@DefaultValue("-") String greeting
+		@QueryParam("greeting") @DefaultValue("-") String greeting
 	) {
 		return Templates.m03d03(greeting);
 	}
