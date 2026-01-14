@@ -16,7 +16,7 @@ public interface M03Menus {
 		new RawString("Demo...")
 	);
 	MainCardInfo M03D02_CARD_INFO = new MainCardInfo(
-		M03D02.URL + "?greeting=Hello",
+		M03Routing.M03D02_URL + "?greeting=Hello",
 		new RawString("Content Page"),
 		new RawString("taking a parameter"),
 		new RawString("When the page itself needs a parameter"),
