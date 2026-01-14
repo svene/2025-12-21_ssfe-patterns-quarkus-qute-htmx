@@ -9,7 +9,7 @@ import static dev.svenehrke.demo.ssfepatterns.m03pages.M03Routing.M03D03_URL;
 @TemplateData(namespace = TemplateData.SIMPLENAME)
 public interface M03Menus {
 	MainCardInfo M03D01_CARD_INFO = new MainCardInfo(
-		M03D01.URL,
+		M03Routing.M03D01_URL,
 		new RawString("Content Page"),
 		null,
 		new RawString("Recommended for most use cases"),

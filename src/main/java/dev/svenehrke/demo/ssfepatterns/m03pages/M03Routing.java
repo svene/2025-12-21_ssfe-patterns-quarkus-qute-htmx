@@ -12,8 +12,17 @@ import jakarta.ws.rs.QueryParam;
 @TemplateData(namespace = TemplateData.SIMPLENAME)
 public class M03Routing {
 
+	// D01 --------------------------------------------
+	public static final String M03D01_URL = "/m03/d01";
+	@GET
+	@Path(M03Routing.M03D01_URL)
+	public TemplateInstance page() {
+		return Templates.m03d01();
+	}
+
 	// D02 --------------------------------------------
 	public static final String M03D02_URL = "/m03/d02";
+
 	@GET
 	@Path(M03Routing.M03D02_URL)
 	public TemplateInstance m03d02e(
@@ -49,6 +58,7 @@ public class M03Routing {
 
 	@CheckedTemplate(basePath = "dev/svenehrke/demo/ssfepatterns/m03pages")
 	private static class Templates {
+		public static native TemplateInstance m03d01();
 		public static native TemplateInstance m03d02(String greeting);
 		public static native TemplateInstance m03d03(String greeting);
 		public static native TemplateInstance m03d04p1();
