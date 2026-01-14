@@ -8,13 +8,13 @@ import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.QueryParam;
 
-@TemplateData(namespace = TemplateData.SIMPLENAME)
 @Path("/")
-public class M03D03 {
-	public static final String URL = "/m03/d03";
+@TemplateData(namespace = TemplateData.SIMPLENAME)
+public class Routing {
+	public static final String M03D03_URL = "/m03/d03";
 
 	@GET
-	@Path(M03D03.URL)
+	@Path(M03D03_URL)
 	public TemplateInstance page(
 		@QueryParam("greeting")
 		@DefaultValue("-") String greeting
@@ -26,4 +26,5 @@ public class M03D03 {
 	private static class Templates {
 		public static native TemplateInstance m03d03(String greeting);
 	}
+
 }
