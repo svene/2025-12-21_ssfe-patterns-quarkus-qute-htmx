@@ -6,7 +6,7 @@ import io.quarkus.qute.TemplateData;
 public interface M03D01Code {
 	String HTML = """
 	  {#include dev/svenehrke/demo/ssfepatterns/components/bulmapage.html}
-	    <h1 class="title">Content Page</h1>
+	    <h1>Content Page</h1>
 	  {/include}
 	  """;
 	String LAYOUT = """
