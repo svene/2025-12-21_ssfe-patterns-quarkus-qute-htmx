@@ -15,13 +15,18 @@ public interface M01D03Code {
 	  """;
 	String JAVA = """
       @Path("/")
-      public class Page03Resource {
-        public static final String URL = "/p01plain/page03withparamscomponent";
+      public class M01D03 {
+        public static final String URL = "/m01/d03";
 
         @GET
         @Path(URL)
         public TemplateInstance page() {
-          return PlainTemplates.Templates.page03withparamscomponent();
+          return PlainTemplates.Templates.m01d03();
+        }
+
+        @CheckedTemplate(basePath = "dev/svenehrke/demo/ssfepatterns/m01plain")
+        private static class Templates {
+          public static native TemplateInstance m01d03();
         }
       }
       """;
@@ -31,13 +36,5 @@ public interface M01D03Code {
 	  
 	  <h3>{greeting} {greetee}!</h3>
 	  """;
-	String TEMPLATES_JAVA = """
-      public class PlainTemplates {
-        @CheckedTemplate(basePath = "dev/svenehrke/demo/ssfepatterns/p01plain")
-        static class Templates {
-          public static native TemplateInstance page03withparamscomponent();
-        }
-      }
-      """;
 
 }
