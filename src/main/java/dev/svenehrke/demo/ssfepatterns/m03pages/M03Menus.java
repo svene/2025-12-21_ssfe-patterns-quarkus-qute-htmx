@@ -30,7 +30,7 @@ public interface M03Menus {
 		new RawString("Demo...")
 	);
 	MainCardInfo M03D04_CARD_INFO = new MainCardInfo(
-		M03D04.PAGE1_URL,
+		M03Routing.PAGE1_URL,
 		new RawString("MPA Example"),
 		new RawString("with menu"),
 		null,
