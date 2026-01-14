@@ -12,7 +12,7 @@ public interface M03D02Code {
 	  """;
 	String JAVA = """
       @Path("/")
-      public class M03D02 {
+      public class M03D02Routing {
         public static final String URL = "/m03/d02";
 
         @GET

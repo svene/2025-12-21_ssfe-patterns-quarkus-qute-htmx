@@ -18,7 +18,7 @@ public interface M03D03Code {
 	  """;
 	String JAVA = """
       @Path("/")
-      public class M03D03 {
+      public class M03D03Routing {
         public static final String URL = "/m03/d03";
 
         @GET

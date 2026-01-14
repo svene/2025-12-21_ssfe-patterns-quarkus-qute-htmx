@@ -22,7 +22,7 @@ public interface M03D01Code {
       """;
 	String JAVA = """
       @Path("/")
-      public class M03D01 {
+      public class M03D01Routing {
         public static final String URL = "/m03/d01";
 
         @GET

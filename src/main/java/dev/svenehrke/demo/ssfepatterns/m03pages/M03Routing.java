@@ -25,7 +25,7 @@ public class M03Routing {
 		public static final String URL = "/m03/d02";
 		@GET
 		@Path(URL)
-		public TemplateInstance m03d02e(
+		public TemplateInstance page(
 			@QueryParam("greeting") @DefaultValue("-") String greeting
 		) {
 			return Templates.m03d02(greeting);
@@ -37,10 +37,10 @@ public class M03Routing {
 		public static final String URL = "/m03/d03";
 		@GET
 		@Path(URL)
-		public TemplateInstance m03d02e(
+		public TemplateInstance page(
 			@QueryParam("greeting") @DefaultValue("-") String greeting
 		) {
-			return Templates.m03d02(greeting);
+			return Templates.m03d03(greeting);
 		}
 	}
 
