@@ -7,7 +7,7 @@ import jakarta.ws.rs.Path;
 
 @Path("/")
 public class M01D01 {
-	static final String URL = "/m01/d01";
+	public static final String URL = "/m01/d01";
 
 	@GET
 	@Path(URL)
