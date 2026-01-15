@@ -29,4 +29,21 @@ public interface M04D01Code {
         }
       }
       """;
+
+	String PARENT_HTML = """
+	  {@String greeting}
+	  <h3>Parent</h3>
+	  <div>
+	    {#include dev/svenehrke/demo/ssfepatterns/m04uipatterns/m04d01child.html}
+	      {#slot1}slot-content from parent. Greeting: {greeting}{/slot1}
+	    {/include}
+	  </div>
+	  """;
+
+	String CHILD_HTML = """
+	  <div>
+	    Child: <span>{#insert slot1}{/insert}</span>
+	  </div>
+	  """;
+
 }
