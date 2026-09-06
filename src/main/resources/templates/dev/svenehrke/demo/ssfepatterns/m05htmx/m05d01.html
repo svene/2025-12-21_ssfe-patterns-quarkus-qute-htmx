@@ -1,11 +1,13 @@
 {#include dev/svenehrke/demo/ssfepatterns/components/bulmapage.html}
+    <!-- docs:start page -->
     <h1 class="title">UrlComponentPage</h1>
     <button class="button" hx-get="{M05D01MessageRouting:URL}?message=hello" hx-target="#my-message">Include Component</button>
     <div id="my-message"></div>
     <hr>
     <p>Message Component is dynamically included using:</p>
     <pre>hx-get=M05D01MessageRouting.URL?message=hello</pre>
+    <!-- docs:end page -->
     <hr>
-    {#include dev/svenehrke/demo/ssfepatterns/m05htmx/m05d01_code}{/include}
+    <a href="http://localhost:4321/technologies/07_qute/m05/">Docs</a>
 {/include}
 

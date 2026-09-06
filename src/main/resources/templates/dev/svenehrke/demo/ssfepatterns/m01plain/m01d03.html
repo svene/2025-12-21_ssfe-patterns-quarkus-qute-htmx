@@ -10,14 +10,16 @@
 <body class="page">
 
 <div>
+	<!-- docs:start page -->
 	<h1>Page with Params-Component</h1>
 
 {!	first parameter passed literally from this template.
 	Second parameter coming in from controller through Model and passed to included template:
 !}
     {#include dev/svenehrke/demo/ssfepatterns/components/helloworldparams.html greeting="Hey" greetee = greetee}{/include}
+	<!-- docs:end page -->
 	<hr>
-    {#include dev/svenehrke/demo/ssfepatterns/m01plain/m01d03_code.html}{/include}
+	<a href="http://localhost:4321/technologies/07_qute/m01/">Docs</a>
 
 </div>
 </body>
