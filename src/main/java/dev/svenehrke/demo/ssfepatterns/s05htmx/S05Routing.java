@@ -1,0 +1,45 @@
+package dev.svenehrke.demo.ssfepatterns.s05htmx;
+
+import io.quarkus.qute.CheckedTemplate;
+import io.quarkus.qute.TemplateData;
+import io.quarkus.qute.TemplateInstance;
+import jakarta.ws.rs.DefaultValue;
+import jakarta.ws.rs.GET;
+import jakarta.ws.rs.Path;
+import jakarta.ws.rs.QueryParam;
+
+@TemplateData(namespace = TemplateData.SIMPLENAME)
+public class S05Routing {
+	// docs:start d01
+	@Path("/")
+	public static class S05D01Routing {
+		public static final String URL = "/s05/d01";
+		@GET
+		@Path(URL)
+		public TemplateInstance page() {
+			return Templates.s05d01();
+		}
+	}
+
+	@Path("/")
+	@TemplateData(namespace = TemplateData.SIMPLENAME)
+	public static class S05D01MessageRouting {
+		public static final String URL = "/s05/d01/message";
+		@GET
+		@Path(URL)
+		public TemplateInstance ui(
+			@QueryParam("message") @DefaultValue("-") String message
+		) {
+			return Templates.s05d01message(message);
+		}
+	}
+	// docs:end d01
+
+	@CheckedTemplate(basePath = "dev/svenehrke/demo/ssfepatterns/s05htmx")
+	private static class Templates {
+		public static native TemplateInstance s05d01();
+		public static native TemplateInstance s05d01message(String message);
+	}
+
+
+}

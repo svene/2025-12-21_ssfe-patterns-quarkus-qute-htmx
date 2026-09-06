@@ -1,0 +1,44 @@
+{@String selectedMenu}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Application/Page Patterns</title>
+	<script src="/js/htmx.org/4.0.0/htmx.js"></script>
+	<link rel="stylesheet" href="/css/bulma/1.0.4/bulma.min.css"/>
+	<link rel="stylesheet" href="/main.css"/>
+	<link rel="stylesheet" href="/simplepage.css"/>
+</head>
+
+<body>
+<section class="hero is-link">
+	<div class="hero-body">
+		<p class="title">Template Based Application/Page Patterns</p>
+		<p class="subtitle">SSFE-Patterns Demo with Quarkus-QUTE</p>
+	</div>
+</section>
+
+<div class="container mt-1">
+	<!-- docs:start page -->
+	<nav class="navbar" role="navigation" aria-label="main navigation">
+		<div class="navbar-menu">
+			<div class="navbar-start">
+				<a class="navbar-item {#if selectedMenu == 'page1'}is-selected{/if}" href="{S03D04Routing:PAGE1_URL}">Page 1</a>
+				<a class="navbar-item {#if selectedMenu == 'page2'}is-selected{/if}" href="{S03D04Routing:PAGE2_URL}">Page 2</a>
+			</div>
+		</div>
+	</nav>
+
+	<div class="p-1 mt-1 area-border" style="min-height: 300px">
+        {#insert}{/insert}
+	</div>
+	<!-- docs:end page -->
+
+	<hr>
+	<a href="http://localhost:4321/technologies/07_qute/s03/">Docs</a>
+
+</div>
+
+</body>
+</html>

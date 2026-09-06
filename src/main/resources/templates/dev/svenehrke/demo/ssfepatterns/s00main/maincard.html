@@ -1,0 +1,23 @@
+{@dev.svenehrke.demo.ssfepatterns.s00main.MainCardInfo cardInfo}
+
+<div class="cell is-flex is-justify-content-start is-align-items-center">
+	<div class="card" style="width: 50%; height: 100%">
+		<a href="{cardInfo.url}" target="_blank">
+			<div class="card-content">
+				<p class="title is-4 mb-1">{cardInfo.title}</p>
+				<p class="title is-6 mb-1">{cardInfo.subTitle}</p>
+
+                {#if cardInfo.recommendation}
+					<p class="subtitle is-6 mb-1">
+                        {cardInfo.recommendation}
+					</p>
+                {/if}
+			</div>
+			<div class="card-content">
+                {#insert content}{cardInfo.content}{/insert}
+			</div>
+
+		</a>
+	</div>
+</div>
+
