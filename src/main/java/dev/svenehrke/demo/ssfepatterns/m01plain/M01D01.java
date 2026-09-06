@@ -5,6 +5,7 @@ import io.quarkus.qute.TemplateInstance;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 
+// docs:start page
 @Path("/")
 public class M01D01 {
 	public static final String URL = "/m01/d01";
@@ -21,3 +22,4 @@ public class M01D01 {
 	}
 
 }
+// docs:end page

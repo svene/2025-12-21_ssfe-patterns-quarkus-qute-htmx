@@ -10,6 +10,7 @@ import jakarta.ws.rs.QueryParam;
 
 @TemplateData(namespace = TemplateData.SIMPLENAME)
 public class M03Routing {
+	// docs:start d01
 	@Path("/")
 	public static class M03D01Routing {
 		public static final String URL = "/m03/d01";
@@ -19,7 +20,9 @@ public class M03Routing {
 			return Templates.m03d01();
 		}
 	}
+	// docs:end d01
 
+	// docs:start d02
 	@Path("/")
 	public static class M03D02Routing {
 		public static final String URL = "/m03/d02";
@@ -31,7 +34,9 @@ public class M03Routing {
 			return Templates.m03d02(greeting);
 		}
 	}
+	// docs:end d02
 
+	// docs:start d03
 	@Path("/")
 	public static class M03D03Routing {
 		public static final String URL = "/m03/d03";
@@ -43,7 +48,9 @@ public class M03Routing {
 			return Templates.m03d03(greeting);
 		}
 	}
+	// docs:end d03
 
+	// docs:start d04
 	@Path("/")
 	@TemplateData(namespace = TemplateData.SIMPLENAME)
 	public static class M03D04Routing {
@@ -61,9 +68,9 @@ public class M03Routing {
 			return Templates.m03d04p2();
 		}
 	}
+	// docs:end d04
 
 
-	// D04 --------------------------------------------
 
 	@CheckedTemplate(basePath = "dev/svenehrke/demo/ssfepatterns/m03pages")
 	private static class Templates {

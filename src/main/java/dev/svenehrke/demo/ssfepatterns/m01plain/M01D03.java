@@ -6,6 +6,7 @@ import io.quarkus.qute.TemplateInstance;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 
+// docs:start page
 @TemplateData(namespace = TemplateData.SIMPLENAME)
 @Path("/")
 public class M01D03 {
@@ -23,3 +24,4 @@ public class M01D03 {
 	}
 
 }
+// docs:end page

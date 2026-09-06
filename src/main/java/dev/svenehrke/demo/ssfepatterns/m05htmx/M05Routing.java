@@ -10,6 +10,7 @@ import jakarta.ws.rs.QueryParam;
 
 @TemplateData(namespace = TemplateData.SIMPLENAME)
 public class M05Routing {
+	// docs:start d01
 	@Path("/")
 	public static class M05D01Routing {
 		public static final String URL = "/m05/d01";
@@ -32,6 +33,7 @@ public class M05Routing {
 			return Templates.m05d01message(message);
 		}
 	}
+	// docs:end d01
 
 	@CheckedTemplate(basePath = "dev/svenehrke/demo/ssfepatterns/m05htmx")
 	private static class Templates {

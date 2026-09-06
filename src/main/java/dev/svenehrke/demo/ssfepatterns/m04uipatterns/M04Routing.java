@@ -8,6 +8,7 @@ import jakarta.ws.rs.Path;
 
 @TemplateData(namespace = TemplateData.SIMPLENAME)
 public class M04Routing {
+	// docs:start d01
 	@Path("/")
 	public static class M04D01Routing {
 		public static final String URL = "/m04/d01";
@@ -17,7 +18,9 @@ public class M04Routing {
 			return Templates.m04d01();
 		}
 	}
+	// docs:end d01
 
+	// docs:start d02
 	@Path("/")
 	public static class M04D02Routing {
 		public static final String URL = "/m04/d02";
@@ -27,6 +30,7 @@ public class M04Routing {
 			return Templates.m04d02();
 		}
 	}
+	// docs:end d02
 
 	@CheckedTemplate(basePath = "dev/svenehrke/demo/ssfepatterns/m04uipatterns")
 	static class Templates {
