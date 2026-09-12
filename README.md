@@ -1,4 +1,4 @@
-# ssfe-patterns-quarkus-qute-htmx
+# hypermedia-patterns-quarkus-qute-htmx
 
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
 

@@ -1,0 +1,23 @@
+{! TODO !}
+{#fragment strong _hidden}
+	<strong>{val}</strong>
+{/fragment}
+
+<section class="section">
+	<h1 class="title">Simple Pages using QUTE</h1>
+	<h2 class="subtitle">For basic usecases. Needs a Resource-Endpoint</h2>
+
+	<div class="fixed-grid">
+		<div class="grid">
+            {#include dev/svenehrke/demo/hypermediapatterns/s00main/maincard cardInfo = S01Menus:S01D01_CARD_INFO}
+              {#content}XXXDemo...{/content} {! TODO !}
+			{/include}
+
+            {#include dev/svenehrke/demo/hypermediapatterns/s00main/maincard cardInfo = S01Menus:S01D01_CARD_INFO}{/include}
+            {#include dev/svenehrke/demo/hypermediapatterns/s00main/maincard cardInfo = S01Menus:S01D02_CARD_INFO}}{/include}
+            {#include dev/svenehrke/demo/hypermediapatterns/s00main/maincard cardInfo = S01Menus:S01D03_CARD_INFO}}{/include}
+            {#include dev/svenehrke/demo/hypermediapatterns/s00main/maincard cardInfo = S01Menus:S01D04_CARD_INFO}}{/include}
+		</div>
+	</div>
+</section>
+
